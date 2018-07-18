@@ -4,12 +4,12 @@ Note how to use QuickStartSchema on Cloud Directory
 ## Usage Scenario
 In the past, we needed to define Schema first, then published with Major/Minor version, last applied to Directory. But if we needed to change schema frequently, these steps were very complicated. Now, Cloud Directory QuickStartSchema is available. You can apply ManageSchema to your directory. And you wouldn't need to define Schema, Facet, Attributes at first.
 
-Any details, pleas read [How to rapidly develop applications on Amazon Cloud Directory with Managed Schema
+Any details, please read [How to rapidly develop applications on Amazon Cloud Directory with Managed Schema
 ](https://aws.amazon.com/tw/blogs/database/rapidly-develop-applications-on-amazon-cloud-directory-with-managed-schema/)
 
 ## Example (AWS Command Line Interface)
 
-1. Use `ListManagedSchemaArns` API to list ManagedSchema ARNs.
+### 1. Use `ListManagedSchemaArns` API to list ManagedSchema ARNs.
 
 #### Request
 ```Shell
@@ -27,7 +27,7 @@ aws clouddirectory list-managed-schema-arns
 
 If you wanted to know `Facet Name` or `Attributes`, you cloud use [ListFacetNames](https://docs.aws.amazon.com/zh_tw/directoryservice/latest/APIReference/API_ListFacetNames.html), [ListFacetAttributes](https://docs.aws.amazon.com/zh_tw/directoryservice/latest/APIReference/API_ListFacetAttributes.html) API
 
-2. Apply `QuickStartSchema` to your directory.
+### 2. Apply `QuickStartSchema` to your directory.
 
 #### Request
 ```Shell
@@ -43,7 +43,7 @@ aws clouddirectory apply-schema --directory-arn <Your Directory Arn Here> \
 }
 ```
 
-3. Create Object, TypedLink, Policy, etc.
+### 3. Create Object, TypedLink, Policy, etc.
 
 You need to put 2 schema in `SchemaFacets` argument.
 
